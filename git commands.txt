@@ -1,0 +1,31 @@
+git log --oneline	this will show all commits
+
+git init	makes a repo in your directory
+
+git rm --cached . 	removes all staged files
+
+git checkout <id>	this will move you back (or forward) to another commit. should be
+treated as read-only
+
+git checkout master	this will get you back on top of the commit
+
+git revert <id>		this will revert any changes that a commit has done
+
+git merge coolFeature	this will merge a branch into the master branch
+
+git checkout -b coolFeature	creates another branch
+
+git remote add origin https://ello.com	creates an alias for the URL of a remote repo
+so you don't have to type out the URL each time, just use the origin keyword
+
+git remote -v	this will show you the repo destination for fetching and pushing
+
+git pull origin master	this will pull all code from the repo to your local machine. this
+ensures that any changes made on the remote repo will be also made to your local machine
+
+git push origin coolFeature	this will push the branch of coolFeature to the remote
+repo. it's not ideal to push the master branch because it will override the code, which
+other developers might not agree on. It's ideal to push with a test branch, and have
+the code reviewed, before merging it with the master branch
+
+git clone --recursive	clone a repo recursively, should be done to a repo with submodules
